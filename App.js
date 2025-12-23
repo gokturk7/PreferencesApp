@@ -1,14 +1,15 @@
 import { NavigationContainer } from'@react-navigation/native';
 import { createNativeStackNavigator } from
 '@react-navigation/native-stack';
+import { AuthProvider } from './context/AuthContext';
+
 
 import LoginScreen from'./screens/LoginScreen';
 import HomeScreen from'./screens/HomeScreen';
 import SettingsScreen from'./screens/SettingsScreen';
 const Stack= createNativeStackNavigator();
 export default function App() {
-return 
-(
+return (
 <AuthProvider>
 <NavigationContainer>
 <Stack.Navigator>
